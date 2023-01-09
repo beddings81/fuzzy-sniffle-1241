@@ -5,6 +5,8 @@
 <% end %>
 </div>
 
+<p><%= link_to "#{@chef.name}'s Ingredients", chef_ingredients_path(@chef) %></p>
+
 <%= form_with url: chef_path(@chef), method: :patch, local: true do |form| %>
   <%= form.label :id %>
   <%= form.number_field :dish_id %>
